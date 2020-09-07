@@ -6,7 +6,7 @@ Taskplan is a simple todo app using firebase - for authenticate. Sqlite for data
 <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/1.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/2.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/3.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/4.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/5.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/6.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/7.png" width="200">  <img src="https://github.com/theiskaa/taskplan/blob/master/assets/screenshots/8.png" width="200">
 
 ### Package i use:
-- sqflite
+- sqflite:
 - path:
 - firebase_auth: ^0.15.4
 - loud_firestore: ^0.13.5

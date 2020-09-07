@@ -7,10 +7,10 @@ Taskplan is a simple todo app using firebase - for authenticate. Sqlite for data
 
 ### Package i use:
 
-**sqflite**
-**path:**
-**firebase_auth: ^0.15.4**
-loud_firestore: ^0.13.5
-provider: ^4.3.2
-flutter_spinkit: ^4.1.2
-focused_menu: ^1.0.1
+- sqflite**
+- path:**
+- firebase_auth: ^0.15.4
+- loud_firestore: ^0.13.5
+- provider: ^4.3.2
+- flutter_spinkit: ^4.1.2
+- focused_menu: ^1.0.1

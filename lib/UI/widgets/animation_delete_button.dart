@@ -20,7 +20,7 @@ class _AnimationDeleteButtonState extends State<AnimationDeleteButton> {
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: null, 
+      animation: _animationController, 
       builder: null,
     );
   }

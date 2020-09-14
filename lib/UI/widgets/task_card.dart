@@ -34,15 +34,62 @@ class TaskCard extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        trailing: IconButton(
-          icon: Icon(
-            Icons.delete,
-            size: 35,
-            color: Colors.white,
-          ),
-          onPressed: onPress,
-        ),
+        trailing: AnimationDeleteButton(onPress: onPress),
       ),
+    );
+  }
+}
+
+
+class AnimationDeleteButton extends StatefulWidget {
+  final Function onPress;
+  AnimationDeleteButton({this.onPress});
+  @override
+  _AnimationDeleteButtonState createState() => _AnimationDeleteButtonState();
+}
+
+class _AnimationDeleteButtonState extends State<AnimationDeleteButton>
+    with TickerProviderStateMixin {
+  final Function onPress;
+  _AnimationDeleteButtonState({this.onPress});
+  AnimationController _animationController;
+  Animation<double> _sizeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        milliseconds: 300,
+      ),
+    );
+
+    _sizeAnimation = TweenSequence(
+      <TweenSequenceItem<double>>[
+        TweenSequenceItem(tween: Tween<double>(begin: 35, end: 38), weight: 38),
+        TweenSequenceItem(tween: Tween<double>(begin: 38, end: 35), weight: 38),
+      ],
+    ).animate(_animationController);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _animationController,
+      builder: (context, index) {
+        return GestureDetector(
+          child: IconButton(
+            icon: Icon(
+              Icons.delete,
+              color: Colors.white,
+              size: _sizeAnimation.value,
+            ),
+            onPressed: onPress,
+          ),
+        );
+      },
     );
   }
 }

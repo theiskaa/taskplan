@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/UI/widgets/appBarTitle.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -27,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         color: Colors.white,
       ),
-      child: Padding(
+      child: Container(
         padding: const EdgeInsets.all(25),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,13 +46,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              child: Text(
-                title,
-                style: TextStyle(
-                  fontSize: 48,
-                  color: Color(0xff312E33),
-                ),
-              ),
+              child: AppBarTitle(title: title),
             ),
           ],
         ),

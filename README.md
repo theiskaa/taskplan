@@ -9,7 +9,7 @@ Taskplan is a simple todo app using firebase - for authenticate and sqlite for d
 run this commands on terminal
 ```
 cd Desktop
-git clone https://github.com/theiskaa/minor_news
+git clone https://github.com/theiskaa/taskplan
 ```
 then you have to run pub get command
 ```
@@ -17,7 +17,7 @@ flutter pub get
 ```
 And then you can run the application
 ```
-cd minor_news 
+cd taskplan 
 flutter run
 ```
 
